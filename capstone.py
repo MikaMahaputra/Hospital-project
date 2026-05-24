@@ -45,10 +45,10 @@ def add_patient():
 
     patient_data.append({
         'patient_id': patient_id_add,
-        'name':       name_add,
-        'age':        age_add,
-        'gender':     gender_add,
-        'diagnosis':  diagnosis_add
+        'name'      : name_add,
+        'age'       : age_add,
+        'gender'    : gender_add,
+        'diagnosis' : diagnosis_add
     })
     print(f"Patient '{name_add}' successfully added!")
                 
@@ -57,6 +57,47 @@ def view_patient():
     print("-" * 67) #Six Seven
     for i, patient in enumerate(patient_data):
         print(f"{i:<8} {patient['patient_id']:<8} {patient['name']:<20} {patient['age']:<5} {patient['gender']:<10} {patient['diagnosis']:<15}")
+
+def update_patient():
+    print("\n--- Update Patient Data ---")
+    view_patient()
+
+    index = int(input("\nEnter the index of the patient to update: "))
+
+    if 0 <= index < len(patient_data):
+        patient = patient_data[index]
+        print(f"\nUpdating data for: {patient['name']}")
+        print("(Press Enter to keep the current value)\n")
+
+        new_id = input(f"New Patient ID [{patient['patient_id']}]: ").strip()
+        new_name = input(f"New Name [{patient['name']}]: ").strip()
+        new_age = input(f"New Age [{patient['age']}]: ").strip()
+        new_gender = input(f"New Gender [{patient['gender']}]: ").strip()
+        new_diagnosis = input(f"New Diagnosis [{patient['diagnosis']}]: ").strip()
+
+        if new_id: patient['patient_id'] = new_id
+        if new_name: patient['name'] = new_name
+        if new_age: patient['age'] = int(new_age)
+        if new_gender: patient['gender'] = new_gender
+        if new_diagnosis: patient['diagnosis'] = new_diagnosis
+
+        print(f"\nPatient data successfully updated!")
+        view_patient()
+    else:
+        print("Invalid input, please try again.")
+
+def delete_patient():
+    print("\n--- Delete Patient ---")
+    view_patient()
+
+    index = int(input("\nEnter the index of the patient to delete: "))
+
+    if 0 <= index < len(patient_data):
+        removed = patient_data.pop(index)
+        print(f"\nPatient '{removed['name']}' successfully deleted!")
+        view_patient()
+    else:
+        print("Invalid input, please try again.")
 
 while running:
     view_menu()
