@@ -9,7 +9,7 @@
 | Full Name   | Mikhael Mika Mahaputra                                                                                           |
 | Case Study  | Data Pasien Rumah Sakit                                                                                          |
 | Date        | 17 / 05 / 2026                                                                                                   |
-| GitHub Repo | [https://github.com/MikaMahaputra/Hospital-Patient-Data](https://github.com/MikaMahaputra/Hospital-Patient-Data) |
+| GitHub Repo | [[https://github.com/MikaMahaputra/Hospital-Patient-Data](Hospital-project](https://github.com/MikaMahaputra/Hospital-project/edit/main/README.md)) |
 
 ---
 
