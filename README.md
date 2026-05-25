@@ -40,7 +40,7 @@ User membuka menu aplikasi yaitu memilih fitur berdasarkan nomor yang diinput se
 
 ## 5. Where is the data located?
 
-Data disimpan di dalam memory program.
+Data disimpan di dalam bentuk file CSV.
 
 ## 6. How is the data organized?
 
@@ -106,8 +106,39 @@ Aplikasi ini dirancang untuk membantu staf administrasi rumah sakit yang mengala
 
 Project ini akan membantu proses pencatatan data pasien dengan sistem CRUD. Dengan CRUD, staff dapat menambah, membaca, mengupdate, dan menghapus data pasien dengan rapi dan mudah.
 
-Batasan project saat ini yaitu data hanya disimpan sementara di dalam memory program.
+Batasan project saat ini yaitu hanya dalam bentuk command line, belum memiliki tampilan visual dengan GUI.
 
 ---
 
-#
+# Features
+
+Add Patient: Menambah pasien baru dengan validation.
+View Patients: Melihat data-data pasien yang sudah di input dalam bentuk tabel.
+Search Patient: Mencari pasien menggunakan ID pasien.
+Update Patient: Mengubah data pasien yang sudah di input.
+Delete Patient: Menghapus pasien dengan confirmation sebagai safety.
+Validation (ID, Name, Age, Gender, Diagnosis): Mencegah fields yang empty atau tipe data yang salah (string sebagai umur sebagai contohnya.)
+CSV: Data akan disimpan ke patients.csv dan akan dipanggil setiap programnya berjalan.
+
+# Structure
+capstone.py:             File utama untuk loop menu 
+data.py:                 Memiliki fungsi untuk save dan load data ke CSV
+validation.py:           Memvalidasi input
+menu.py:                 Memiliki CRUD function
+patients.csv:            File untuk menyimpan data
+
+# Running
+
+## 1. Make sure Python is installed
+
+## 2. Clone or download this repository
+
+## 3. Go to folder's project
+
+## 4. Run the program
+
+```bash
+python capstone.py
+```
+
+## 5. Patients.csv file will be created automatically once the program is running
